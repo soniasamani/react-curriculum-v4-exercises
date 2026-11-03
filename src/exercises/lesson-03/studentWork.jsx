@@ -2,11 +2,20 @@
 //Exercise: React Bug Hunt – Fix the broken components in this folder
 //Impport components here
 
+import BugEffectLoop from './BugEffectLoop.jsx';
+import BugMutatedState from './BugMutatedState.jsx';
+import BugProps from './BugProps.jsx';
+
 export default function StudentWork() {
   return (
     <div>
-      {/* add components here */}
-      <p>Student output will go here</p>
+      <h1>Lesson 03 - React Bug Hunt</h1>
+
+      <BugEffectLoop />
+
+      <BugMutatedState />
+
+      <BugProps />
     </div>
   );
 }

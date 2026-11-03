@@ -15,10 +15,13 @@ export default function BugEffectLoop() {
 
   useEffect(() => {
     setCount(count + 1);
-  });
+  }, []);
 
   return <p>Bug 1 Count: {count}</p>;
 }
 
 // Explanation:
-// (Write your explanation here)
+// The useEffect was running after every render because
+// it didn't have a dependency array.
+// Adding [] makes it run only when the component mounts,
+// preventing the repeated state updates.
